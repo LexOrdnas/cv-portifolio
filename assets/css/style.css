@@ -139,7 +139,7 @@ main .column{
 }
 
 main .column section {
-    border-bottom: 1px solid #d4e9ff;
+    border-bottom: 0.1px solid #d4e9ff;
     margin: 0 0 20px;
     min-height: 187px;
     color:var(--colorTextSecondary);
