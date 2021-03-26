@@ -213,6 +213,30 @@ label span {
     transition: all ease .3s;
 }
 
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #136c96;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px rgb(219, 219, 219);
+  }
+  
+  .button:hover {background-color: #136c96b4}
+  
+  .button:active {
+    background-color: #136c96d8;
+    box-shadow: 0 5px rgb(219, 219, 219);
+    transform: translateY(4px);
+  }
+
 .activate-dark:checked ~ .dark-mode label{
     background-color: #136c96;
 }
