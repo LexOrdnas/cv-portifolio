@@ -74,6 +74,7 @@ header .column-right {
 
 header .column img {
     max-width: 100%;
+    z-index: 1;
 }
 
 header .column h1 {
@@ -200,7 +201,7 @@ label {
     padding: 5px 5px;
     box-sizing: border-box;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 
 label span {
