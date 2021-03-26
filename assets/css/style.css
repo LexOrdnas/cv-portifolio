@@ -114,6 +114,7 @@ footer nav ul li a {
 
 footer nav .contact-info li {
     margin: 0 0 15px;
+    padding-left: 20px;
 }
 
 footer nav .social-networks {
@@ -131,6 +132,11 @@ footer nav .social-networks li {
 
 footer nav .social-networks li a img {
     width: 40px;
+    transition: .2s;
+}
+
+footer nav .social-networks li a:hover img{
+    transform: scale(1.1) translateY(-2px);
 }
 
 /* HOMEPAGE */
@@ -139,7 +145,7 @@ main .column{
 }
 
 main .column section {
-    border-bottom: 0.1px solid #d4e9ff;
+    border-bottom: 0.1px solid #136c96;
     margin: 0 0 20px;
     min-height: 187px;
     color:var(--colorTextSecondary);
@@ -179,13 +185,41 @@ main .column section ul li strong {
     display: none;
 }
 
+header .container {
+    position: relative;
+}
+
 label {
-    border-radius: 15px;
-    padding: 10px;
-    color: var(--colorTextPrimary);
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 52px;
+    height: 30px;
+    background-color: var(--colorBackgroundSecondary);
+    border-radius: 20px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1;
+}
+
+label span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 100%;
+    transition: all ease .3s;
+}
+
+.activate-dark:checked ~ .dark-mode label{
+    background-color: #136c96;
+}
+.activate-dark:checked ~ .dark-mode label span{
+    background-color: white;
+    /* margin-left: 21px; */
+    transform: translateX(21px);
+    transition: all ease .3s;
 }
 
 .activate-dark:checked ~ .dark-mode {
@@ -210,6 +244,24 @@ label {
 .activate-dark:checked ~ .dark-mode main {
     background-color:var(--colorBackgroundSecondary) ;
 } 
+
+@keyframes increaseWidth {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes increaseHeight{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
+}
 
 
 /* @MEDIA */
@@ -247,7 +299,40 @@ label {
     }
 
     main .column section {
-        border: 1px solid #d4e9ff;
+        border: 0.5px solid #eef6ff;
+        /*border: 2px solid transparent;*/
+        padding: 20px;
+        position: relative;
+    }
+
+    main .column section span{
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 2px solid transparent;
+    }
+
+    main .column section .top-right{
+        top: -2px;
+        left: -2px;
+        animation-name: increaseWidth, increaseHeight;
+        animation-duration: 1s, 1s;
+        animation-delay: 2s, 3s;
+        animation-fill-mode: forwards;
+        border-top-color: #d4e9ff;
+        border-right-color: #d4e9ff;
+    }
+
+    main .column section .bottom-left {
+        bottom: -2px;
+        right: -2px;
+        animation-name: increaseWidth, increaseHeight;
+        animation-duration: 1s, 1s;
+        animation-delay: 4s, 5s;
+        animation-fill-mode: forwards;
+        border-bottom-color: #d4e9ff;
+        border-left-color: #d4e9ff;
     }
 
     main .column {
