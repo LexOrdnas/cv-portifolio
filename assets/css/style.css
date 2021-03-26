@@ -151,6 +151,10 @@ main .column section {
     min-height: 187px;
     color:var(--colorTextSecondary);
     padding: 20px;
+    -webkit-box-shadow: 4px 6px 26px -15px rgba(19,108,150,1);
+    -moz-box-shadow: 4px 6px 26px -15px rgba(19,108,150,1);
+    box-shadow: 4px 6px 26px -15px rgba(19,108,150,1);
+  
 }
 
 main .column section h2 {
